@@ -38,4 +38,10 @@ SELECT UPPER(컬럼명) AS 대문자컬럼명
 FROM 테이블명; 
 
 
+COUNT 
+
+AVG 
+
+
+
 */
