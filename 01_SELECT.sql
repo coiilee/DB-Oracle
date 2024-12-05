@@ -88,3 +88,59 @@ ex ) 이름이 비어있지 않은 사원 조회
     select emp_name 
     from  employee 
     where emp_name is not null;*/
+
+
+/* ***** ORDER BY절 ***** 
+- SELECT문의 조회 결과(Result SET)을 정렬할 때 사용하는 구문 
+SELECT 구문에서 제일 마지막에 해석됨 
+
+[작성법]
+
+3.SELECT 컬럼명 AS별칭, 컬럼명 , 컬럼명, ... 
+1.FROM 테이블명 
+2.WHERE 조건식 
+4.ORDER BY 컬럼명| 별칭 | 컬럼순서 [오름/내림차순]
+
+오름차순 : ASC(ascending)
+내림차순 : DESC(descending)
+
+ORDER BY  컬럼명;으로 오름차순 내림차순 아무것도 작성을 안해주면 기본으로 오름차순 정렬임 
+
+NULLS FIRST / NULLS LAST
+null 값을 어디에 배치할지 설정 
+NULLS FIRST : null값을 맨 위에 설정 
+NULLS LAST : null 값을 맨 아래에 설정 
+ORDER BY에서 맨 뒤에 작성 
+
+ORDER BY 뒤에 NULL에 대한 배치 표기가 없다면 기본값으로 맨 뒤에 배치됨 
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
