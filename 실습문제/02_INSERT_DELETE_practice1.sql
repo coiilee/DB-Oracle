@@ -145,6 +145,53 @@ VALUES (39, 19, '헤이즐넛 라떼','헤이즐넛 향이 풍부한 라떼',550
 INSERT INTO EATS_MENU (MENU_ID,CAFE_ID,MENU_NAME,DESCRIPTION,PRICE)
 VALUES (40, 20, '그린티 프라페','녹차와 우유의 달콤한 음료',6000);
 
+--DEPARTMENT 테이블에서 DEPT_ID가 'D9'인 부서 정보 조회 
+SELECT * FROM DEPARTMENT 
+WHERE DEPT_ID = 'D9' ; --총무부 
+
+--DEPARTMENT 테이블에서 DEPT_ID가 'D9'인 행의 DEPT_TITLE을 전략기획팀으로 수정하기 
+UPDATE DEPARTMENT 
+SET DEPT_TITLE = '전략기획팀'
+WHERE DEPT_ID = 'D9'; 
+
+SELECT * FROM EATS;
+--로맨틱 블루라는 카페의 전화번호를 010-0000-1111로 변경하기
+UPDATE EATS 
+SET CONTACT_NUMBER = '010-0000-1111'
+WHERE CAFE_NAME = '로맨틱블루';
+
+--EATS_MENU 테이블에서 MENU_NAME = 화이트 모카인 메뉴의 가격을 6000원으로 업데이트 하기 
+--메뉴이름은 정확히 화이트 모카 
+SELECT * FROM EATS_MENU; 
+
+UPDATE EATS_MENU 
+SET PRICE = 6000
+WHERE MENU_NAME = '화이트 모카';
+
+--EATS_MUNU 테이블에서 MENU_NAME이 밀크티인 메뉴의 설명을 홍차와 우유가 어우러진 진한 맛 으로 수정 
+UPDATE EATS_MENU 
+SET DESCRIPTION= '홍차와 우유가 어우러진 진한 맛'
+WHERE MENU_NAME = '밀크티';
+
+--EATS_MENU 테이블에서 PRICE가 5500원 이하인 모든 메뉴 가격 10% 인상하여업데이트 
+--PRICE가 5500원 이하인 메뉴만 수정 
+-- SET PRICE = PRICE * 1.1 
+UPDATE EATS_MENU 
+SET PRICE = PRICE * 1.1 
+WHERE PRICE <=5500;
+
+SELECT * FROM EATS; 
+--그린빈 카페 서울시 종로구 010-2345-6789 에서 경기도 안양시 주소 변경 전화번호 제거 
+--제거 = NULL 을 사용함 
+UPDATE EATS 
+SET LOCATION = '경기도 안양시', CONTACT_NUMBER = NULL 
+WHERE CAFE_NAME = '그린빈 카페'; 
+
+
+
+
+
+
 
 
 
