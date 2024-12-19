@@ -33,13 +33,14 @@ END;
 -- studentid를 명시하지 않고, 자동으로 증가하는 값으로 학생을 저장하기
 -- INSERT INTO 테이블명칭 (studentname, studentage) VALUES ('홍길동', 11);
 -- 강철수 12, 박길자 13 오말숙 14 안정미 15 1,2,3,4 번호 순으로 저장
+INSERT INTO STUDENT (studentname, studentage) VALUES ('홍길동', 11);
 INSERT INTO STUDENT (studentname, studentage) VALUES ('강철수', 12);
 INSERT INTO STUDENT (studentname, studentage) VALUES ('박길자', 13);
 INSERT INTO STUDENT (studentname, studentage) VALUES ('오말숙', 14);
 INSERT INTO STUDENT (studentname, studentage) VALUES ('안정미', 15);
 -- SELECT 문 활용해서 저장이 잘 되었는지 확인
 
-
+SELECT * FROM student ;
 SELECT TRIGGER_NAME, STATUS
 FROM USER_TRIGGERS
 WHERE TRIGGER_NAME = 'TRG_USER';
