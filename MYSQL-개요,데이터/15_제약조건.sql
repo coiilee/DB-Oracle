@@ -63,8 +63,10 @@
       CREATE TABLE 테이블명(
       테이블_ID INT         AUTO_INCREMENT PRIMARY KEY, 
       유저명    VARCHAR(50) NOT NULL, 
-      가입일자  DATE        NOT NULL DEFAULT CURRENT_DATE 
+      가입일자  DATETIME        NOT NULL DEFAULT CURRENT_DATE 
       ) 
+-- DATE 자료형은 current_timestamp 사용 불가 
+-- date 자료형은 연-월-일만 저장되고, DATETIME 연-월-일 시:분:초 저장이 되므로 DATETIME 사용해야함. 
 
       유저명과 가입일자 모두 NULL(빈)값 작성 XXX 
       -> 
@@ -147,7 +149,7 @@
     무조건 외래키 제약을 걸어서 삭제하는 것이 좋은 것이 아니라 상황에 따라 사용 
     예를 들어) 커뮤니티 카페의 경우 카페 회원 탈퇴를 할 경우 회원이 작성한 게시물과 댓글 삭제 X 
                배달 앱의 경우 가게가 폐업을 할 경우 가게에서 제공한 메뉴들과 리뷰 모두 삭제됨 
-               
+
 
 EX) 쿠팡이츠 가게가 삭제되면 부가적인 메뉴 등 정보들도 한번에 삭제되는것 : FOREIGN KEY 
     CREATE TABLE 이츠(
