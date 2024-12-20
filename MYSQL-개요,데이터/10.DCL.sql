@@ -88,7 +88,14 @@ GRANT SELECT, INSERT, UPDATE ON KHUSER.user TO 'JUNIOR'@'%';
 -- REVOKE : 권한 회수 
 
 -- JUNIOR가 이상한 행동을 하는 것 같음. 기존에 부여한 권한 중 INSERT, UPDATE를 회수 
-REVOKE INSERT, UPDATE ON KHUSER.user TO 'JUNIOR'@'%'; 
+REVOKE INSERT, UPDATE ON KHUSER.user FROM 'JUNIOR'@'%'; 
 
 --JUNIOR가 이상한 행동을 보이는게 맞음! 혹시 모르니 모든 권한 회수 
-REVOKE ALL PRIVILEGES ON KHUSER.* TO 'JUNIOR'@'%'; 
+REVOKE ALL PRIVILEGES ON KHUSER.* FROM 'JUNIOR'@'%'; 
+
+/*
+권한 부여 
+GRANT ______ TO _______ ;
+권한 회수 
+REVOKE ______ FROM ______ ; 
+*/
